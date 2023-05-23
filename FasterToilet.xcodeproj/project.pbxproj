@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF03B3582A1C80770017FC04 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AF03B3572A1C80760017FC04 /* Fonts */; };
+		AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */; };
+		AF5DA2AD2A1BA83200903946 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Toilet.swift */; };
+		AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2B32A1BAA5600903946 /* Fonts.swift */; };
+		AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */; };
+		AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600D2A1B6C720022B079 /* ContentView.swift */; };
+		AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D600F2A1B6C730022B079 /* Assets.xcassets */; };
+		AF9D60132A1B6C730022B079 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D60122A1B6C730022B079 /* Preview Assets.xcassets */; };
+		AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AF03B3572A1C80760017FC04 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; sourceTree = "<group>"; };
+		AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingScreen.swift; sourceTree = "<group>"; };
+		AF5DA2AC2A1BA83200903946 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
+		AF5DA2B12A1BA9F600903946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AF5DA2B32A1BAA5600903946 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AF9D60082A1B6C720022B079 /* FasterToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FasterToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterToiletApp.swift; sourceTree = "<group>"; };
+		AF9D600D2A1B6C720022B079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF9D600F2A1B6C730022B079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF9D60122A1B6C730022B079 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF9D60052A1B6C720022B079 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF5DA2AE2A1BA95300903946 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF03B3572A1C80760017FC04 /* Fonts */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF5DA2B22A1BAA4600903946 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DA2B32A1BAA5600903946 /* Fonts.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		AF9D5FFF2A1B6C720022B079 = {
+			isa = PBXGroup;
+			children = (
+				AF9D600A2A1B6C720022B079 /* FasterToilet */,
+				AF9D60092A1B6C720022B079 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF9D60092A1B6C720022B079 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF9D60082A1B6C720022B079 /* FasterToilet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF9D600A2A1B6C720022B079 /* FasterToilet */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DA2B22A1BAA4600903946 /* Utils */,
+				AF5DA2B12A1BA9F600903946 /* Info.plist */,
+				AF5DA2AE2A1BA95300903946 /* Fonts */,
+				AF9D601B2A1B6CA20022B079 /* View Models */,
+				AF9D601A2A1B6C9C0022B079 /* Models */,
+				AF9D60192A1B6C930022B079 /* Screens */,
+				AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */,
+				AF9D600D2A1B6C720022B079 /* ContentView.swift */,
+				AF9D600F2A1B6C730022B079 /* Assets.xcassets */,
+				AF9D60112A1B6C730022B079 /* Preview Content */,
+			);
+			path = FasterToilet;
+			sourceTree = "<group>";
+		};
+		AF9D60112A1B6C730022B079 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AF9D60122A1B6C730022B079 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF9D60192A1B6C930022B079 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */,
+				AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AF9D601A2A1B6C9C0022B079 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF5DA2AC2A1BA83200903946 /* Toilet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF9D601B2A1B6CA20022B079 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF9D60072A1B6C720022B079 /* FasterToilet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF9D60162A1B6C730022B079 /* Build configuration list for PBXNativeTarget "FasterToilet" */;
+			buildPhases = (
+				AF9D60042A1B6C720022B079 /* Sources */,
+				AF9D60052A1B6C720022B079 /* Frameworks */,
+				AF9D60062A1B6C720022B079 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FasterToilet;
+			productName = FasterToilet;
+			productReference = AF9D60082A1B6C720022B079 /* FasterToilet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF9D60002A1B6C720022B079 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					AF9D60072A1B6C720022B079 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = AF9D60032A1B6C720022B079 /* Build configuration list for PBXProject "FasterToilet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF9D5FFF2A1B6C720022B079;
+			productRefGroup = AF9D60092A1B6C720022B079 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF9D60072A1B6C720022B079 /* FasterToilet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF9D60062A1B6C720022B079 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9D60132A1B6C730022B079 /* Preview Assets.xcassets in Resources */,
+				AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */,
+				AF03B3582A1C80770017FC04 /* Fonts in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF9D60042A1B6C720022B079 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5DA2AD2A1BA83200903946 /* Toilet.swift in Sources */,
+				AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */,
+				AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */,
+				AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */,
+				AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */,
+				AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF9D60142A1B6C730022B079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF9D60152A1B6C730022B079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF9D60172A1B6C730022B079 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FasterToilet/Preview Content\"";
+				DEVELOPMENT_TEAM = Q27VK9D5N7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FasterToilet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanghyeon.FasterToilet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF9D60182A1B6C730022B079 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FasterToilet/Preview Content\"";
+				DEVELOPMENT_TEAM = Q27VK9D5N7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FasterToilet/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sanghyeon.FasterToilet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF9D60032A1B6C720022B079 /* Build configuration list for PBXProject "FasterToilet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9D60142A1B6C730022B079 /* Debug */,
+				AF9D60152A1B6C730022B079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF9D60162A1B6C730022B079 /* Build configuration list for PBXNativeTarget "FasterToilet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9D60172A1B6C730022B079 /* Debug */,
+				AF9D60182A1B6C730022B079 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF9D60002A1B6C720022B079 /* Project object */;
+}
