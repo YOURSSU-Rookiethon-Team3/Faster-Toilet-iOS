@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF03B3582A1C80770017FC04 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = AF03B3572A1C80760017FC04 /* Fonts */; };
 		AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */; };
-		AF5DA2AD2A1BA83200903946 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Toilet.swift */; };
+		AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Button.swift */; };
 		AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2B32A1BAA5600903946 /* Fonts.swift */; };
 		AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */; };
 		AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600D2A1B6C720022B079 /* ContentView.swift */; };
 		AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D600F2A1B6C730022B079 /* Assets.xcassets */; };
 		AF9D60132A1B6C730022B079 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D60122A1B6C730022B079 /* Preview Assets.xcassets */; };
 		AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */; };
+		AFF6DDAC2A1DA555009B68C2 /* Noto_Sans_KR in Resources */ = {isa = PBXBuildFile; fileRef = AFF6DDAB2A1DA554009B68C2 /* Noto_Sans_KR */; };
+		AFF6DDAE2A1DAD99009B68C2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AF03B3572A1C80760017FC04 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; sourceTree = "<group>"; };
 		AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingScreen.swift; sourceTree = "<group>"; };
-		AF5DA2AC2A1BA83200903946 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
+		AF5DA2AC2A1BA83200903946 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		AF5DA2B12A1BA9F600903946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF5DA2B32A1BAA5600903946 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		AF9D60082A1B6C720022B079 /* FasterToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FasterToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +30,8 @@
 		AF9D600F2A1B6C730022B079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9D60122A1B6C730022B079 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		AFF6DDAB2A1DA554009B68C2 /* Noto_Sans_KR */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Noto_Sans_KR; sourceTree = "<group>"; };
+		AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +48,7 @@
 		AF5DA2AE2A1BA95300903946 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				AF03B3572A1C80760017FC04 /* Fonts */,
+				AFF6DDAB2A1DA554009B68C2 /* Noto_Sans_KR */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5DA2B32A1BAA5600903946 /* Fonts.swift */,
+				AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -112,7 +115,7 @@
 		AF9D601A2A1B6C9C0022B079 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AF5DA2AC2A1BA83200903946 /* Toilet.swift */,
+				AF5DA2AC2A1BA83200903946 /* Button.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,9 +185,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF6DDAC2A1DA555009B68C2 /* Noto_Sans_KR in Resources */,
 				AF9D60132A1B6C730022B079 /* Preview Assets.xcassets in Resources */,
 				AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */,
-				AF03B3582A1C80770017FC04 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,9 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF5DA2AD2A1BA83200903946 /* Toilet.swift in Sources */,
+				AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */,
 				AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */,
 				AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */,
+				AFF6DDAE2A1DAD99009B68C2 /* Colors.swift in Sources */,
 				AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */,
 				AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */,
 				AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */,
@@ -338,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
