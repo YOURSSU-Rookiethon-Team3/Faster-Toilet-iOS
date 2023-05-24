@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SplashScreen: View {
     var body:some View {
-        VStack(spacing: 20){
+        VStack(spacing: 10) {
             Rectangle()
                 .foregroundColor(.gray)
                 .frame(width: 100, height: 100)
@@ -17,16 +17,13 @@ struct SplashScreen: View {
             Text("급할때 화장실")
                 .font(.largeTitle)
             Text("지금까지 923명이 저에게 추천받았어요!")
+                .foregroundColor(.gray)
+                .font(.caption)
                 .padding(.bottom, 30)
             
             NavigationLink(destination: BuildingScreen()) {
-                Text("찾아보기")
-                    .foregroundColor(.white)
-                    .frame(width: 160, height: 40)
-                    .background(Color.blue)
-                    .cornerRadius(50)
+                CustomButton(title:"찾아보기")
             }
-            
         }
     }
 }
