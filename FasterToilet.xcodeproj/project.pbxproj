@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */; };
+		AF34DCB42A1F2559003F3DA8 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB32A1F2559003F3DA8 /* CombineMoya */; };
+		AF34DCB62A1F2559003F3DA8 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB52A1F2559003F3DA8 /* Moya */; };
+		AF34DCB82A1F2559003F3DA8 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB72A1F2559003F3DA8 /* ReactiveMoya */; };
+		AF34DCBA2A1F2559003F3DA8 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB92A1F2559003F3DA8 /* RxMoya */; };
+		AF34DCBF2A1F2AD8003F3DA8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */; };
+		AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34DCC02A1F2ADE003F3DA8 /* Color.swift */; };
 		AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Button.swift */; };
 		AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2B32A1BAA5600903946 /* Fonts.swift */; };
 		AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */; };
@@ -17,10 +23,17 @@
 		AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */; };
 		AFF6DDAC2A1DA555009B68C2 /* Noto_Sans_KR in Resources */ = {isa = PBXBuildFile; fileRef = AFF6DDAB2A1DA554009B68C2 /* Noto_Sans_KR */; };
 		AFF6DDAE2A1DAD99009B68C2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */; };
+		AFF6DDB02A1DD600009B68C2 /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DDAF2A1DD600009B68C2 /* FilterScreen.swift */; };
+		AFF6DE222A1E7E8C009B68C2 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DE212A1E7E8C009B68C2 /* Building.swift */; };
+		AFF6DE242A1E7EBD009B68C2 /* Restroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DE232A1E7EBD009B68C2 /* Restroom.swift */; };
+		AFF6DE262A1E8043009B68C2 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DE252A1E8042009B68C2 /* DetailScreen.swift */; };
+		AFF6DE282A1E83BB009B68C2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF6DE272A1E83BB009B68C2 /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingScreen.swift; sourceTree = "<group>"; };
+		AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		AF34DCC02A1F2ADE003F3DA8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AF5DA2AC2A1BA83200903946 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		AF5DA2B12A1BA9F600903946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF5DA2B32A1BAA5600903946 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -32,6 +45,11 @@
 		AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		AFF6DDAB2A1DA554009B68C2 /* Noto_Sans_KR */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Noto_Sans_KR; sourceTree = "<group>"; };
 		AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AFF6DDAF2A1DD600009B68C2 /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
+		AFF6DE212A1E7E8C009B68C2 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		AFF6DE232A1E7EBD009B68C2 /* Restroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restroom.swift; sourceTree = "<group>"; };
+		AFF6DE252A1E8042009B68C2 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		AFF6DE272A1E83BB009B68C2 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +57,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF34DCB62A1F2559003F3DA8 /* Moya in Frameworks */,
+				AF34DCB42A1F2559003F3DA8 /* CombineMoya in Frameworks */,
+				AF34DCBA2A1F2559003F3DA8 /* RxMoya in Frameworks */,
+				AF34DCB82A1F2559003F3DA8 /* ReactiveMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF34DCBD2A1F2ABA003F3DA8 /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */,
+				AF34DCC02A1F2ADE003F3DA8 /* Color.swift */,
+			);
+			path = Consts;
+			sourceTree = "<group>";
+		};
 		AF5DA2AE2A1BA95300903946 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +112,13 @@
 		AF9D600A2A1B6C720022B079 /* FasterToilet */ = {
 			isa = PBXGroup;
 			children = (
+				AF34DCBD2A1F2ABA003F3DA8 /* Consts */,
+				AFF6DE202A1E7E7A009B68C2 /* Models */,
 				AF5DA2B22A1BAA4600903946 /* Utils */,
 				AF5DA2B12A1BA9F600903946 /* Info.plist */,
 				AF5DA2AE2A1BA95300903946 /* Fonts */,
-				AF9D601B2A1B6CA20022B079 /* View Models */,
-				AF9D601A2A1B6C9C0022B079 /* Models */,
+				AF9D601B2A1B6CA20022B079 /* ViewModels */,
+				AF9D601A2A1B6C9C0022B079 /* Views */,
 				AF9D60192A1B6C930022B079 /* Screens */,
 				AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */,
 				AF9D600D2A1B6C720022B079 /* ContentView.swift */,
@@ -108,23 +141,35 @@
 			children = (
 				AF9D601C2A1B6CC10022B079 /* SplashScreen.swift */,
 				AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */,
+				AFF6DDAF2A1DD600009B68C2 /* FilterScreen.swift */,
+				AFF6DE252A1E8042009B68C2 /* DetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		AF9D601A2A1B6C9C0022B079 /* Models */ = {
+		AF9D601A2A1B6C9C0022B079 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AF5DA2AC2A1BA83200903946 /* Button.swift */,
+				AFF6DE272A1E83BB009B68C2 /* Rating.swift */,
 			);
-			path = Models;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		AF9D601B2A1B6CA20022B079 /* View Models */ = {
+		AF9D601B2A1B6CA20022B079 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "View Models";
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AFF6DE202A1E7E7A009B68C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFF6DE212A1E7E8C009B68C2 /* Building.swift */,
+				AFF6DE232A1E7EBD009B68C2 /* Restroom.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +188,12 @@
 			dependencies = (
 			);
 			name = FasterToilet;
+			packageProductDependencies = (
+				AF34DCB32A1F2559003F3DA8 /* CombineMoya */,
+				AF34DCB52A1F2559003F3DA8 /* Moya */,
+				AF34DCB72A1F2559003F3DA8 /* ReactiveMoya */,
+				AF34DCB92A1F2559003F3DA8 /* RxMoya */,
+			);
 			productName = FasterToilet;
 			productReference = AF9D60082A1B6C720022B079 /* FasterToilet.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +222,9 @@
 				Base,
 			);
 			mainGroup = AF9D5FFF2A1B6C720022B079;
+			packageReferences = (
+				AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = AF9D60092A1B6C720022B079 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,12 +252,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF34DCBF2A1F2AD8003F3DA8 /* Endpoint.swift in Sources */,
+				AFF6DE282A1E83BB009B68C2 /* Rating.swift in Sources */,
 				AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */,
+				AFF6DE222A1E7E8C009B68C2 /* Building.swift in Sources */,
 				AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */,
 				AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */,
+				AFF6DDB02A1DD600009B68C2 /* FilterScreen.swift in Sources */,
 				AFF6DDAE2A1DAD99009B68C2 /* Colors.swift in Sources */,
+				AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */,
+				AFF6DE242A1E7EBD009B68C2 /* Restroom.swift in Sources */,
 				AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */,
 				AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */,
+				AFF6DE262A1E8043009B68C2 /* DetailScreen.swift in Sources */,
 				AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +470,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF34DCB32A1F2559003F3DA8 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		AF34DCB52A1F2559003F3DA8 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		AF34DCB72A1F2559003F3DA8 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		AF34DCB92A1F2559003F3DA8 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF34DCB22A1F2559003F3DA8 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF9D60002A1B6C720022B079 /* Project object */;
 }
