@@ -16,6 +16,9 @@
 		AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34DCC02A1F2ADE003F3DA8 /* Color.swift */; };
 		AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Button.swift */; };
 		AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2B32A1BAA5600903946 /* Fonts.swift */; };
+		AF6468612A22571D00441496 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468602A22571D00441496 /* BaseTargetType.swift */; };
+		AF6468632A225EC900441496 /* BuildingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468622A225EC900441496 /* BuildingMapper.swift */; };
+		AF6468652A226EB700441496 /* IncludedAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468642A226EB700441496 /* IncludedAPICall.swift */; };
 		AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */; };
 		AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600D2A1B6C720022B079 /* ContentView.swift */; };
 		AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D600F2A1B6C730022B079 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 		AF5DA2AC2A1BA83200903946 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		AF5DA2B12A1BA9F600903946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF5DA2B32A1BAA5600903946 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		AF6468602A22571D00441496 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		AF6468622A225EC900441496 /* BuildingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMapper.swift; sourceTree = "<group>"; };
+		AF6468642A226EB700441496 /* IncludedAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncludedAPICall.swift; sourceTree = "<group>"; };
 		AF9D60082A1B6C720022B079 /* FasterToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FasterToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterToiletApp.swift; sourceTree = "<group>"; };
 		AF9D600D2A1B6C720022B079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,8 +76,8 @@
 		AF34DCBD2A1F2ABA003F3DA8 /* Consts */ = {
 			isa = PBXGroup;
 			children = (
-				AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */,
 				AF34DCC02A1F2ADE003F3DA8 /* Color.swift */,
+				AF6468622A225EC900441496 /* BuildingMapper.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -93,6 +99,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		AF9865DF2A20ED9D004A9DA0 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				AF9865E02A20EDAF004A9DA0 /* DTO */,
+				AF6468602A22571D00441496 /* BaseTargetType.swift */,
+				AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */,
+				AF6468642A226EB700441496 /* IncludedAPICall.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		AF9865E02A20EDAF004A9DA0 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AFF6DE212A1E7E8C009B68C2 /* Building.swift */,
+				AFF6DE232A1E7EBD009B68C2 /* Restroom.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		AF9D5FFF2A1B6C720022B079 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +138,8 @@
 		AF9D600A2A1B6C720022B079 /* FasterToilet */ = {
 			isa = PBXGroup;
 			children = (
+				AF9865DF2A20ED9D004A9DA0 /* Networks */,
 				AF34DCBD2A1F2ABA003F3DA8 /* Consts */,
-				AFF6DE202A1E7E7A009B68C2 /* Models */,
 				AF5DA2B22A1BAA4600903946 /* Utils */,
 				AF5DA2B12A1BA9F600903946 /* Info.plist */,
 				AF5DA2AE2A1BA95300903946 /* Fonts */,
@@ -161,15 +187,6 @@
 			children = (
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		AFF6DE202A1E7E7A009B68C2 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AFF6DE212A1E7E8C009B68C2 /* Building.swift */,
-				AFF6DE232A1E7EBD009B68C2 /* Restroom.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,17 +269,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF6468632A225EC900441496 /* BuildingMapper.swift in Sources */,
 				AF34DCBF2A1F2AD8003F3DA8 /* Endpoint.swift in Sources */,
 				AFF6DE282A1E83BB009B68C2 /* Rating.swift in Sources */,
 				AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */,
 				AFF6DE222A1E7E8C009B68C2 /* Building.swift in Sources */,
 				AF9D601D2A1B6CC10022B079 /* SplashScreen.swift in Sources */,
+				AF6468652A226EB700441496 /* IncludedAPICall.swift in Sources */,
 				AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */,
 				AFF6DDB02A1DD600009B68C2 /* FilterScreen.swift in Sources */,
 				AFF6DDAE2A1DAD99009B68C2 /* Colors.swift in Sources */,
 				AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */,
 				AFF6DE242A1E7EBD009B68C2 /* Restroom.swift in Sources */,
 				AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */,
+				AF6468612A22571D00441496 /* BaseTargetType.swift in Sources */,
 				AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */,
 				AFF6DE262A1E8043009B68C2 /* DetailScreen.swift in Sources */,
 				AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */,
