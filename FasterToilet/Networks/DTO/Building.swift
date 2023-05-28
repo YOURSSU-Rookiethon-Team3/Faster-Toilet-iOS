@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct BuildingDTO: Codable {
+// MARK: - Building
+struct Building: Codable {
     let id:Int
     let name:String
-    let restrooms: [RestroomDTO]
+    let floors:[Int]
+    let restrooms: [Restroom]
 }

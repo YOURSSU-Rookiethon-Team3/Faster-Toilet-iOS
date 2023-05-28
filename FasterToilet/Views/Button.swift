@@ -40,7 +40,7 @@ struct CustomButton: View{
                     .font(.system(size: size))
                     .foregroundColor(.white)
                     .frame(width: width, height: height)
-                    .background(Color(0x1650A7))
+                    .background(primaryColor)
                     .cornerRadius(50)
             }
         }

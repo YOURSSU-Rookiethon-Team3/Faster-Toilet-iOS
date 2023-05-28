@@ -10,9 +10,9 @@ import SwiftUI
 struct SplashScreen: View {
     var body:some View {
         VStack(spacing: 10) {
-            Rectangle()
-                .foregroundColor(.gray)
-                .frame(width: 100, height: 100)
+            Image("poo")
+                .resizable()
+                .frame(width: 70, height: 60)
             
             Text("급할때 화장실")
                 .font(.largeTitle)

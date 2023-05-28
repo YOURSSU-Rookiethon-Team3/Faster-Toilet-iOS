@@ -16,10 +16,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             SplashScreen()
-        }
+        }.background(.white)
     }
-    
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
