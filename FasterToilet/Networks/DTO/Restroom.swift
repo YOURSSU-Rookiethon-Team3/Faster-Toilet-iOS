@@ -18,7 +18,8 @@ struct Restroom: Codable {
     let vanity: Bool
     let bidet: Bool
     let disabled: Bool
-    let extra: String
-    let buildings: [Building]
+    let extra: String?
+    let building: Building?
     let createdAt: String
+    let facilities: [String]
 }
