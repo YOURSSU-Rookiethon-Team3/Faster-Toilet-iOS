@@ -201,7 +201,7 @@ struct ToiletComponent:View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
-                Text(restroom.extra)
+                Text(restroom.extra ?? "임시")
                     .font(.system(size: 20))
                 Text(restroom.location)
                     .font(.system(size: 14))
@@ -232,12 +232,7 @@ struct ToiletComponent:View {
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
         
-        var restrooms:[Restroom] = []
-        restrooms.append(Restroom(id: 50,floor: 4, location: "엘리베이터옆", isMale: true, rating: 5, congestion: 3, vanity: true, bidet: true, disabled: false, extra: "무야호", buildings: [], createdAt: "15465"))
-        restrooms.append(Restroom(id: 40,floor: 4, location: "엘리베이터옆", isMale: true, rating: 4.5, congestion: 3, vanity: true, bidet: false, disabled: false, extra: "무야호", buildings: [], createdAt: "15465"))
-        restrooms.append(Restroom(id: 20,floor: 4, location: "엘리베이터옆", isMale: true, rating: 5, congestion: 3, vanity: true, bidet: false, disabled: false, extra: "무야호", buildings: [], createdAt: "15465"))
-        restrooms.append(Restroom(id: 10,floor: 4, location: "엘리베이터옆", isMale: true, rating: 5, congestion: 3, vanity: true, bidet: false, disabled: false, extra: "무야호", buildings: [], createdAt: "15465"))
-        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: restrooms)
+        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: [])
         
         
         return DetailScreen(building: building)
