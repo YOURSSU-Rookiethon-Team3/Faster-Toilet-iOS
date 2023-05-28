@@ -30,9 +30,10 @@ struct FilterScreen: View {
                             .foregroundColor(.black)
                     }
                 }
-                Rectangle()
-                    .frame(width: 100, height: 100)
-                    .foregroundColor(.brown)
+                Image("smiling")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                
                 Text("원하는 화장실 조건을 추가해볼까요?")
                     .font(.title2)
                 
