@@ -34,8 +34,7 @@ struct DetailScreen: View {
                     if floorImage != "에러" {
                         Image(floorImage)
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: UIScreen.main.bounds.height/2-40)
+                            .aspectRatio(contentMode: .fit)
                             .edgesIgnoringSafeArea(.all)
                             .background(Color(0xEFEFEF))
                         
@@ -43,26 +42,33 @@ struct DetailScreen: View {
                         Image(systemName: "error")
                     }
                 }
-                VStack {
+                
+                HStack {
                     Spacer()
-                    HStack {
+                    VStack {
                         Spacer()
-                        VStack( alignment: .trailing, spacing: 0) {
+                        VStack(alignment: .trailing, spacing: 0) {
                             Text(building.name)
                                 .padding(.vertical, 3)
                                 .padding(.horizontal, 5)
                                 .background(Color(0xD9D9D9))
                                 .cornerRadius(10)
-                            Text("추천 화장실 : 6층 B")
+                            Text("추천 화장실 : \(floorConverter(floor:building.recommendRestroom.floor))층 \(building.recommendRestroom.alias ?? "A")")
                                 .padding(.vertical, 3)
                                 .padding(.horizontal, 5)
                                 .background(Color(0xD9D9D9))
                                 .cornerRadius(10)
                                 .padding(.bottom, 5)
                         }
-                        .padding(.trailing, 20)
+                        .onTapGesture {
+                            currentFloor = building.recommendRestroom.floor
+                        }
+                        
                     }
                 }
+                .padding(.trailing, 10)
+                .padding(.bottom, 10)
+                
                 VStack {
                     HStack {
                         Button(action: {
@@ -76,6 +82,7 @@ struct DetailScreen: View {
                     Spacer()
                 }
             }
+            .background(Color(0xEFEFEF))
             
             VStack {
                 List {
@@ -94,7 +101,7 @@ struct DetailScreen: View {
                                 .font(.system(size:30))
                                 .foregroundColor(textColor)
                         }, icon: {Image(systemName: "arrowtriangle.down.fill")
-                            .foregroundColor(textColor)
+                                .foregroundColor(textColor)
                             .padding(.horizontal, 10)})
                     }) {
                         ForEach(currentRestrooms, id: \.id) { restroom in
@@ -136,7 +143,7 @@ struct DetailScreen: View {
                         }.padding(.top, 5)
                     }
                     Spacer()
-                    Image("따봉2")
+                    Image("따봉")
                         .frame(height: 40)
                 }
                 .onTapGesture {
@@ -152,6 +159,7 @@ struct DetailScreen: View {
                 .padding(.vertical, 10)
             }
         }.navigationBarBackButtonHidden(true)
+        //        }
     }
 }
 
@@ -187,7 +195,7 @@ struct ToiletComponent:View {
             HStack {
                 Text("\(restroom.alias ?? "A") 화장실")
                     .font(.system(size: 20))
-                Text(restroom.location)
+                Text("\(restroom.location) \( (restroom.isMale) ? "남자화장실" : "여자화장실")")
                     .font(.system(size: 14))
             }
             StarsView(rating: restroom.rating)
@@ -210,9 +218,8 @@ struct ToiletComponent:View {
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
         let restrooms:[Restroom] = []
-        
-        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: restrooms)
-        
+                
+        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: restrooms, recommendRestroom: emptyRestroom)
         
         return DetailScreen(building: building)
     }

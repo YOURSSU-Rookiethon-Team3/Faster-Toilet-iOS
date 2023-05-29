@@ -13,4 +13,5 @@ struct Building: Codable {
     let name:String
     let floors:[Int]
     let restrooms: [Restroom]
+    let recommendRestroom: Restroom
 }
