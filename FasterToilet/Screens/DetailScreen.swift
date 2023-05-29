@@ -139,6 +139,11 @@ struct DetailScreen: View {
                     Image("따봉2")
                         .frame(height: 40)
                 }
+                .onTapGesture {
+                    if let url = URL(string: "https://eat.soomsil.de/") {
+                        UIApplication.shared.open(url)
+                    }
+                }
                 .padding(.leading, 20)
                 .padding(.vertical, 5)
                 .background(Color(0xE9E9E9))
@@ -180,7 +185,7 @@ struct ToiletComponent:View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
-                Text(restroom.location)
+                Text("\(restroom.alias ?? "A") 화장실")
                     .font(.system(size: 20))
                 Text(restroom.location)
                     .font(.system(size: 14))

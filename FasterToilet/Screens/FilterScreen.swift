@@ -89,7 +89,7 @@ struct FilterScreen: View {
                             .foregroundColor(.black)
                     }
                 }
-                Image("smiling")
+                Image("Smiling")
                     .resizable()
                     .frame(width: 40, height: 40)
                 

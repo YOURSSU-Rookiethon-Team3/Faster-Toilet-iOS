@@ -46,11 +46,12 @@ struct SplashScreen: View {
             
         }
         .onAppear {
-            let provider = MoyaProvider<API>()
-            
+            let provider = MoyaProvider<CountAPI>()
             isLoading = true
+            let deviceId = UIDevice.current.identifierForVendor?.uuidString
             
-            provider.request(.getVisitors) { result in
+            let request = CountAPI.sendVisitorCount(visitorToken: deviceId ?? "")
+            provider.request(request) { result in
                 switch result {
                 case .success(let response):
                     do {
