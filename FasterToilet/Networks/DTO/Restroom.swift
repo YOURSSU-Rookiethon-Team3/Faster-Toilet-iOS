@@ -11,15 +11,16 @@ import Moya
 struct Restroom: Codable {
     let id: Int
     let floor: Int
+    let alias: String?
     let location: String
     let isMale: Bool
-    let rating: Float
+    let rating: Double
     let congestion: Int
     let vanity: Bool
     let bidet: Bool
     let disabled: Bool
     let extra: String?
-    let building: Building?
+    var buildingName: String?
     let createdAt: String
     let facilities: [String]
 }

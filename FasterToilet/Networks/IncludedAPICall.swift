@@ -73,3 +73,171 @@ class BuildingService {
         }
     }
 }
+
+struct CountResponse: Codable {
+    let visitorsCount: Int
+}
+
+enum CountAPI {
+    case sendVisitorCount(visitorToken: String)
+}
+
+extension CountAPI: TargetType {
+    var baseURL: URL { return URL(string: "https://yourssu-faster-toilet-api.hyuns.dev")! }
+    
+    var path: String {
+        switch self {
+        case .sendVisitorCount:
+            return "/visitors"
+        }
+    }
+    
+    var method: Moya.Method {
+        switch self {
+        case .sendVisitorCount:
+            return .post
+        }
+    }
+    
+    var task: Task {
+        switch self {
+        case let .sendVisitorCount(visitorToken):
+            let parameters = ["visitorToken": visitorToken]
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+        }
+    }
+    
+    var sampleData: Data {
+        // You can provide sample data for testing purposes if needed
+        return Data()
+    }
+    
+    var headers: [String: String]? {
+        return ["Content-type": "application/json"]
+    }
+}
+struct VisitorsResponse: Codable {
+    let visitorsCount: Int
+}
+//
+//struct ContentView: View {
+//    @State var count: Int = 0
+//    let provider = MoyaProvider<YourAPI>()
+//    var cancellables = Set<AnyCancellable>()
+//
+//    var body: some View {
+//        Text("Count: \(count)")
+//            .onAppear {
+//                sendPOSTRequest()
+//            }
+//    }
+//
+//    func sendPOSTRequest() {
+//        let request = YourAPI.sendVisitorCount(visitorToken: "12314123")
+//        provider.request(request) { result in
+//            switch result {
+//            case let .success(response):
+//                do {
+//                    let decoder = JSONDecoder()
+//                    let countResponse = try decoder.decode(CountResponse.self, from: response.data)
+//                    count = countResponse.visitorsCount
+//                } catch {
+//                    print("Error decoding response: \(error.localizedDescription)")
+//                }
+//            case let .failure(error):
+//                print("Error sending request: \(error.localizedDescription)")
+//            }
+//        }
+//    }
+//}
+//
+//struct CountResponse: Codable {
+//    let visitorsCount: Int
+//}
+//
+//enum YourAPI {
+//    case sendVisitorCount(visitorToken: String)
+//}
+//
+//extension YourAPI: TargetType {
+//    var baseURL: URL { return URL(string: "https://yourssu-faster-toilet-api.hyuns.dev")! }
+//
+//    var path: String {
+//        switch self {
+//        case .sendVisitorCount:
+//            return "/visitors"
+//        }
+//    }
+//
+//    var method: Moya.Method {
+//        switch self {
+//        case .sendVisitorCount:
+//            return .post
+//        }
+//    }
+//
+//    var task: Task {
+//        switch self {
+//        case let .sendVisitorCount(visitorToken):
+//            let parameters = ["visitorToken": visitorToken]
+//            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+//        }
+//    }
+//
+//    var sampleData: Data {
+//        // You can provide sample data for testing purposes if needed
+//        return Data()
+//    }
+//
+//    var headers: [String: String]? {
+//        return ["Content-type": "application/json"]
+//    }
+//}
+//
+//
+//
+//
+//enum API {
+//    case getVisitors
+//}
+//
+//extension API: TargetType {
+//    var baseURL: URL {
+//        return URL(string: "https://yourssu-faster-toilet-api.hyuns.dev")!
+//    }
+//
+//    var path: String {
+//        switch self {
+//        case .getVisitors:
+//            return "/visitors"
+//        }
+//    }
+//
+//    var method: Moya.Method {
+//        return .get
+//    }
+//
+//    var task: Task {
+//        return .requestPlain
+//    }
+//
+//    var headers: [String: String]? {
+//        return nil
+//    }
+//
+//    var validationType: ValidationType {
+//        return .successCodes
+//    }
+//
+//    var sampleData: Data {
+//        switch self {
+//        case .getVisitors:
+//            return Data()
+//        }
+//    }
+//}
+//
+//struct VisitorsResponse: Codable {
+//    let visitorsCount: Int
+//}
+//

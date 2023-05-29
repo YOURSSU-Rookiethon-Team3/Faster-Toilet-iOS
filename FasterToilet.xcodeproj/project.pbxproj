@@ -12,13 +12,12 @@
 		AF34DCB62A1F2559003F3DA8 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB52A1F2559003F3DA8 /* Moya */; };
 		AF34DCB82A1F2559003F3DA8 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB72A1F2559003F3DA8 /* ReactiveMoya */; };
 		AF34DCBA2A1F2559003F3DA8 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AF34DCB92A1F2559003F3DA8 /* RxMoya */; };
-		AF34DCBF2A1F2AD8003F3DA8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */; };
 		AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF34DCC02A1F2ADE003F3DA8 /* Color.swift */; };
 		AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2AC2A1BA83200903946 /* Button.swift */; };
 		AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5DA2B32A1BAA5600903946 /* Fonts.swift */; };
-		AF6468612A22571D00441496 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468602A22571D00441496 /* BaseTargetType.swift */; };
 		AF6468632A225EC900441496 /* BuildingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468622A225EC900441496 /* BuildingMapper.swift */; };
 		AF6468652A226EB700441496 /* IncludedAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468642A226EB700441496 /* IncludedAPICall.swift */; };
+		AF64686A2A23C5C200441496 /* CategoryTranslater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6468692A23C5C200441496 /* CategoryTranslater.swift */; };
 		AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */; };
 		AF9D600E2A1B6C720022B079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9D600D2A1B6C720022B079 /* ContentView.swift */; };
 		AF9D60102A1B6C730022B079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9D600F2A1B6C730022B079 /* Assets.xcassets */; };
@@ -35,14 +34,13 @@
 
 /* Begin PBXFileReference section */
 		AF03B3592A1C835C0017FC04 /* BuildingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingScreen.swift; sourceTree = "<group>"; };
-		AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		AF34DCC02A1F2ADE003F3DA8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AF5DA2AC2A1BA83200903946 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		AF5DA2B12A1BA9F600903946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AF5DA2B32A1BAA5600903946 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		AF6468602A22571D00441496 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		AF6468622A225EC900441496 /* BuildingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingMapper.swift; sourceTree = "<group>"; };
 		AF6468642A226EB700441496 /* IncludedAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncludedAPICall.swift; sourceTree = "<group>"; };
+		AF6468692A23C5C200441496 /* CategoryTranslater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTranslater.swift; sourceTree = "<group>"; };
 		AF9D60082A1B6C720022B079 /* FasterToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FasterToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9D600B2A1B6C720022B079 /* FasterToiletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasterToiletApp.swift; sourceTree = "<group>"; };
 		AF9D600D2A1B6C720022B079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				AF34DCC02A1F2ADE003F3DA8 /* Color.swift */,
-				AF6468622A225EC900441496 /* BuildingMapper.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -93,8 +90,10 @@
 		AF5DA2B22A1BAA4600903946 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AF6468622A225EC900441496 /* BuildingMapper.swift */,
 				AF5DA2B32A1BAA5600903946 /* Fonts.swift */,
 				AFF6DDAD2A1DAD99009B68C2 /* Colors.swift */,
+				AF6468692A23C5C200441496 /* CategoryTranslater.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -103,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				AF9865E02A20EDAF004A9DA0 /* DTO */,
-				AF6468602A22571D00441496 /* BaseTargetType.swift */,
-				AF34DCBE2A1F2AD8003F3DA8 /* Endpoint.swift */,
 				AF6468642A226EB700441496 /* IncludedAPICall.swift */,
 			);
 			path = Networks;
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6468632A225EC900441496 /* BuildingMapper.swift in Sources */,
-				AF34DCBF2A1F2AD8003F3DA8 /* Endpoint.swift in Sources */,
 				AFF6DE282A1E83BB009B68C2 /* Rating.swift in Sources */,
 				AF5DA2AD2A1BA83200903946 /* Button.swift in Sources */,
 				AFF6DE222A1E7E8C009B68C2 /* Building.swift in Sources */,
@@ -282,9 +278,9 @@
 				AF34DCC12A1F2ADE003F3DA8 /* Color.swift in Sources */,
 				AFF6DE242A1E7EBD009B68C2 /* Restroom.swift in Sources */,
 				AF5DA2B42A1BAA5600903946 /* Fonts.swift in Sources */,
-				AF6468612A22571D00441496 /* BaseTargetType.swift in Sources */,
 				AF9D600C2A1B6C720022B079 /* FasterToiletApp.swift in Sources */,
 				AFF6DE262A1E8043009B68C2 /* DetailScreen.swift in Sources */,
+				AF64686A2A23C5C200441496 /* CategoryTranslater.swift in Sources */,
 				AF03B35A2A1C835C0017FC04 /* BuildingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FasterToilet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "급할때 화장실";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,12 +425,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanghyeon.FasterToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,6 +449,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FasterToilet/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "급할때 화장실";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,12 +460,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanghyeon.FasterToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
