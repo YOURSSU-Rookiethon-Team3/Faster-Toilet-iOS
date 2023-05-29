@@ -9,8 +9,7 @@ import SwiftUI
 import Moya
 
 struct BuildingScreen: View {
-    @State private var buildings:[Building] = [Building(id: 50, name: "형남", floors: [-1,1,2], restrooms: []),Building(id: 50, name: "형남", floors: [-1,1,2], restrooms: []),Building(id: 50, name: "형남", floors: [-1,1,2], restrooms: [])]
-    let emptyBuilding = Building(id: 50, name: "형남", floors: [-1,1,2], restrooms: [])
+    @State private var buildings:[Building] = [emptyBuilding,emptyBuilding,emptyBuilding]
     
     @State private var restrooms:[Restroom] = []
     @State private var isInit = true
