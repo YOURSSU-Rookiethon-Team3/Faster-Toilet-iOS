@@ -73,3 +73,48 @@ class BuildingService {
         }
     }
 }
+
+enum API {
+    case getVisitors
+}
+
+extension API: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://yourssu-faster-toilet-api.hyuns.dev")!
+    }
+    
+    var path: String {
+        switch self {
+        case .getVisitors:
+            return "/visitors"
+        }
+    }
+    
+    var method: Moya.Method {
+        return .get
+    }
+    
+    var task: Task {
+        return .requestPlain
+    }
+    
+    var headers: [String: String]? {
+        return nil
+    }
+    
+    var validationType: ValidationType {
+        return .successCodes
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .getVisitors:
+            return Data()
+        }
+    }
+}
+
+struct VisitorsResponse: Codable {
+    let visitorsCount: Int
+}
+

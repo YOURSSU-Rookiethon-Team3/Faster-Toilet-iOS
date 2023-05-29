@@ -9,13 +9,72 @@ import SwiftUI
 
 struct FilterScreen: View {
     @Environment(\.dismiss) var dismiss
-    @State private var cleanValue: Double = 1
-    @State private var congestionValue: Double = 1
-    @State private var isShowerSelected :Bool = false
-    @State private var isBidetSelected :Bool = false
-    @State private var isDisableSelected: Bool = false
-    @State private var isVanitySelected: Bool = false
-    @State private var toiletCount: Int = 7
+    @Binding private var cleanValue: Double
+    @Binding private var congestionValue: Double
+    @Binding private var isShowerSelected :Bool
+    @Binding private var isBidetSelected :Bool
+    @Binding private var isDisableSelected: Bool
+    @Binding private var isVanitySelected: Bool
+    
+    private var restrooms:[Restroom]
+    @Binding private var filteredRestrooms:[Restroom]
+    
+    init(restrooms:[Restroom], filteredRestrooms:Binding<[Restroom]>, cleanValue:Binding<Double>, congestionValue:Binding<Double>, isShowerSelected:Binding<Bool>,isBidetSelected:Binding<Bool>,isDisableSelected:Binding<Bool>,isVanitySelected:Binding<Bool>) {
+        self.restrooms = restrooms
+        self._filteredRestrooms = filteredRestrooms
+        self._cleanValue = cleanValue
+        self._congestionValue = congestionValue
+        self._isShowerSelected = isShowerSelected
+        self._isBidetSelected = isBidetSelected
+        self._isDisableSelected = isDisableSelected
+        self._isVanitySelected = isVanitySelected
+    }
+    
+    
+    
+    func filterCategory() {
+        self.filteredRestrooms = self.restrooms
+        
+        if !isShowerSelected && !isBidetSelected && !isDisableSelected && !isVanitySelected && cleanValue == 1 && congestionValue == 1 {
+            return
+        }
+        
+        self.filteredRestrooms = []
+        
+        if congestionValue == 2 {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter{ $0.congestion > 3 }
+        } else if congestionValue == 1 {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter{ $0.congestion > 2 }
+        } else {
+            self.filteredRestrooms = self.restrooms
+        }
+        
+        if !isShowerSelected && !isBidetSelected && !isDisableSelected && !isVanitySelected {
+            return
+        }
+        
+        if isShowerSelected {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter { $0.facilities.contains("shower") }
+        }
+        if isBidetSelected {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter{ $0.bidet }
+        }
+        if isDisableSelected {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter{ $0.disabled }
+        }
+        if isVanitySelected {
+            self.filteredRestrooms = self.filteredRestrooms + self.restrooms.filter{ $0.vanity }
+        }
+        var restroomIds:[Int] = []
+        var tempRestrooms:[Restroom] = []
+        for restroom in filteredRestrooms {
+            if !restroomIds.contains(restroom.id) {
+                tempRestrooms.append(restroom)
+                restroomIds.append(restroom.id)
+            }
+        }
+        self.filteredRestrooms = tempRestrooms
+    }
     
     var body: some View {
         ScrollView() {
@@ -44,6 +103,7 @@ struct FilterScreen: View {
                     Slider(value: $cleanValue, in: 0...2, step: 1)
                         .onChange(of: cleanValue) { newValue in
                             cleanValue = round(newValue)
+                            filterCategory()
                         }.padding(.horizontal, 20)
                     HStack {
                         Text("상관없음")
@@ -67,6 +127,7 @@ struct FilterScreen: View {
                     Slider(value: $congestionValue, in: 0...2, step: 1)
                         .onChange(of: congestionValue) { newValue in
                             congestionValue = round(newValue)
+                            filterCategory()
                         }.padding(.horizontal, 20)
                     HStack {
                         Text("상관없음")
@@ -91,12 +152,14 @@ struct FilterScreen: View {
                         Spacer()
                         Button(action:{
                             isShowerSelected.toggle()
+                            filterCategory()
                         }) {
                             CustomButton(title:"샤워실", isSelected: isShowerSelected)
                         }
                         Spacer()
                         Button( action: {
                             isBidetSelected.toggle()
+                            filterCategory()
                         }) {
                             CustomButton(title: "비데", isSelected: isBidetSelected)
                         }
@@ -106,12 +169,14 @@ struct FilterScreen: View {
                         Spacer()
                         Button(action:{
                             isDisableSelected.toggle()
+                            filterCategory()
                         }) {
                             CustomButton(title:"장애인 화장실", isSelected: isDisableSelected)
                         }
                         Spacer()
                         Button(action:{
                             isVanitySelected.toggle()
+                            filterCategory()
                         }) {
                             CustomButton(title:"화장대", isSelected: isVanitySelected)
                         }
@@ -122,7 +187,7 @@ struct FilterScreen: View {
                 HStack(spacing: 0) {
                     Text("조건에 해당하는 ")
                         .font(.caption)
-                    Text("화장실이 \(toiletCount)개")
+                    Text("화장실이 \(filteredRestrooms.count)개")
                         .font(.caption)
                         .fontWeight(.heavy)
                     Text(" 있습니다")
@@ -138,6 +203,7 @@ struct FilterScreen: View {
                         isBidetSelected = false
                         isDisableSelected = false
                         isVanitySelected = false
+                        self.filteredRestrooms = self.restrooms
                     }) {
                         Text("옵션 초기화")
                             .foregroundColor(.blue)
@@ -165,6 +231,6 @@ struct FilterScreen: View {
 
 struct FilterScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FilterScreen()
+        FilterScreen(restrooms: [], filteredRestrooms: .constant([]), cleanValue: .constant(1), congestionValue: .constant(1), isShowerSelected: .constant(false), isBidetSelected: .constant(false), isDisableSelected: .constant(false), isVanitySelected: .constant(false))
     }
 }

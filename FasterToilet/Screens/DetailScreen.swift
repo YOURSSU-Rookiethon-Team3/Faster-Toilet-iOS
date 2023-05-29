@@ -12,43 +12,19 @@ struct DetailScreen: View {
     var building:Building
     var restrooms:[Restroom] = []
     var floors:[Int]=[]
-    @State var floorImage:String = "HyeongNam_B1"
     
-    @State var currentFloor:Int = -1
-    
-    func floorConverter(floor:Int)->String {
-        if floor == -1 {
-            return "B1"
-        }
-        return String(floor)
-    }
-    
-    func floorImageConverter(buildingName:String, floor: Int)->String {
-        if buildingName == "형남공학관" {
-            return "HyeongNam_B1"
-        }
-        if buildingName == "정보과학관" {
-            if floor < 2 {
-                return "InfoScience_\(floorConverter(floor: floor))"
-            }
-            return "InfoScience_2"
-        }
-        if buildingName == "중앙도서관" {
-            if floor <= 1 {
-                return "Library_1"
-            }
-            return "Library_2"
-        }
-        return "에러"
-    }
-    
+    @State var floorImage:String = "형남공학관_B1"
+    @State var currentFloor:Int = 1
+    @State var currentRestrooms:[Restroom] = []
     
     
     init(building:Building) {
         self.building = building
         self.restrooms = building.restrooms
         self.floors = building.floors
-        self.floorImage = floorImageConverter(buildingName: building.name, floor: currentFloor)
+        self._floorImage = State(initialValue: floorImageConverter(buildingName: building.name, floor: currentFloor))
+        self._currentFloor = State<Int>(initialValue: 1)
+        self._currentRestrooms = State<[Restroom]>(initialValue: restrooms.filter { $0.floor == currentFloor })
     }
     
     var body: some View {
@@ -77,7 +53,7 @@ struct DetailScreen: View {
                                 .padding(.horizontal, 5)
                                 .background(Color(0xD9D9D9))
                                 .cornerRadius(10)
-                            Text("추천 화장실 : 6충 B")
+                            Text("추천 화장실 : 6층 B")
                                 .padding(.vertical, 3)
                                 .padding(.horizontal, 5)
                                 .background(Color(0xD9D9D9))
@@ -108,6 +84,8 @@ struct DetailScreen: View {
                             Button(action: {
                                 self.currentFloor = floor
                                 floorImage =  floorImageConverter(buildingName: building.name, floor: currentFloor)
+                                self.currentRestrooms = restrooms.filter { $0.floor == floor
+                                }
                             }, label: {Text("\(floorConverter(floor:floor))층")})
                         }
                     } label: {
@@ -119,7 +97,7 @@ struct DetailScreen: View {
                             .foregroundColor(textColor)
                             .padding(.horizontal, 10)})
                     }) {
-                        ForEach(restrooms, id: \.id) { restroom in
+                        ForEach(currentRestrooms, id: \.id) { restroom in
                             ToiletComponent(restroom: restroom)
                         }
                     }
@@ -158,9 +136,10 @@ struct DetailScreen: View {
                         }.padding(.top, 5)
                     }
                     Spacer()
-                    Image(systemName: "hand.thumbsup.fill")
+                    Image("따봉2")
+                        .frame(height: 40)
                 }
-                .padding(.horizontal, 20)
+                .padding(.leading, 20)
                 .padding(.vertical, 5)
                 .background(Color(0xE9E9E9))
                 .cornerRadius(10)
@@ -201,38 +180,33 @@ struct ToiletComponent:View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             HStack {
-                Text(restroom.extra ?? "임시")
+                Text(restroom.location)
                     .font(.system(size: 20))
                 Text(restroom.location)
                     .font(.system(size: 14))
             }
             StarsView(rating: restroom.rating)
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    if restroom.bidet {
-                        Categories(category: "비데")
+            if !restroom.facilities.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(restroom.facilities, id:\.self) { facility in
+                            Categories(category: categoryTranslater(category: facility))
+                        }
                     }
-                    if restroom.vanity {
-                        Categories(category: "화장대")
-                    }
-                    if restroom.disabled {
-                        Categories(category: "장애인 화장실")
-                    }
+                    .padding(.vertical, 1)
+                    .padding(.horizontal, 1)
                 }
-                .padding(.vertical, 1)
-                .padding(.horizontal, 1)
+                .padding(.top, 5)
             }
-            
-            .padding(.top, 5)
-            
         }
     }
 }
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
+        let restrooms:[Restroom] = []
         
-        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: [])
+        let building = Building(id: 1547, name: "중앙도서관",floors: [-1,1,2,3,4], restrooms: restrooms)
         
         
         return DetailScreen(building: building)
