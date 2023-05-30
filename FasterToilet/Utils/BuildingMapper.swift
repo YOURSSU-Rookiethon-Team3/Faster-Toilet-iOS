@@ -16,7 +16,7 @@ func floorConverter(floor:Int)->String {
 
 func floorImageConverter(buildingName:String, floor: Int)->String {
     if buildingName == "형남공학관" {
-        return "형남공학관_B1"
+        return "형남공학관_\( (floor) <= 3 ? floorConverter(floor: floor) : "3" )"
     }
     if buildingName == "정보과학관" {
         return "정보과학관_\( (floor < 2) ? floorConverter(floor: floor): "2")"

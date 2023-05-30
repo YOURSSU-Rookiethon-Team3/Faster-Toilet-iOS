@@ -185,10 +185,6 @@ struct BuildingScreen: View {
                             }
                             self.restrooms.append(contentsOf: modifiedRestrooms)
                         }
-                        
-                        for building in self.buildings {
-                            self.restrooms = self.restrooms + building.restrooms
-                        }
                         self.filteredRestrooms = self.restrooms
                         
                         self.libraryCount = restroomCounter(buildingName: "중앙도서관", restrooms: self.restrooms)

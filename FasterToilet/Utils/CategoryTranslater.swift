@@ -17,5 +17,5 @@ func categoryTranslater(category:String) -> String {
     if category == "disabled" {
         return "장애인 화장실"
     }
-    return ""
+    return category
 }

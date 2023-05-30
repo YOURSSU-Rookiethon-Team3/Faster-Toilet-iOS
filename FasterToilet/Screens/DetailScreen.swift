@@ -62,6 +62,9 @@ struct DetailScreen: View {
                         }
                         .onTapGesture {
                             currentFloor = building.recommendRestroom.floor
+                            floorImage =  floorImageConverter(buildingName: building.name, floor: currentFloor)
+                            self.currentRestrooms = restrooms.filter { $0.floor == currentFloor
+                            }
                         }
                         
                     }
@@ -159,7 +162,6 @@ struct DetailScreen: View {
                 .padding(.vertical, 10)
             }
         }.navigationBarBackButtonHidden(true)
-        //        }
     }
 }
 
@@ -167,10 +169,17 @@ struct ToiletComponent:View {
     let restroom : Restroom
     
     struct Categories: View {
-        let category: String
+        private let category: String
+        private let nothing: Bool
         
         init(category:String) {
-            self.category = category
+            if category == "" {
+                self.category = "기타시설 없음"
+                nothing = true
+            } else {
+                self.category = category
+                nothing = false
+            }
         }
         
         var body:some View {
@@ -181,7 +190,7 @@ struct ToiletComponent:View {
                 .padding(.vertical, 5)
                 .overlay(
                     RoundedRectangle(cornerRadius: 50)
-                        .stroke(primaryColor, lineWidth: 1)
+                        .stroke( (nothing) ? Color(0x535353) : primaryColor, lineWidth: 1)
                 )
         }
     }
@@ -195,15 +204,23 @@ struct ToiletComponent:View {
             HStack {
                 Text("\(restroom.alias ?? "A") 화장실")
                     .font(.system(size: 20))
-                Text("\(restroom.location) \( (restroom.isMale) ? "남자화장실" : "여자화장실")")
+                Text("\(restroom.location) ")
                     .font(.system(size: 14))
+                // TODO 남자/여자 화장실 구분
+//                Text("\((restroom.isMale) ? "남자화장실" : "여자화장실")")
+//                    .font(.system(size: 14))
+//                    .foregroundColor(.gray)
             }
             StarsView(rating: restroom.rating)
             if !restroom.facilities.isEmpty {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(restroom.facilities, id:\.self) { facility in
-                            Categories(category: categoryTranslater(category: facility))
+                        if restroom.facilities.isEmpty {
+                            Categories(category: "")
+                        } else {
+                            ForEach(restroom.facilities, id:\.self) { facility in
+                                Categories(category: categoryTranslater(category: facility))
+                            }
                         }
                     }
                     .padding(.vertical, 1)
